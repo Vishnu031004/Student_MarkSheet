@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Grade Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📘 Student Grade Book</h1>
+
+  <form id="gradeForm">
+    <input type="text" name="name" placeholder="Student Name" required>
+    <input type="text" name="subject" placeholder="Subject" required>
+    <input type="number" name="marks" placeholder="Marks" required>
+    <button type="submit">Add</button>
+  </form>
+
+  <div class="stats">
+    <h3>📊 Average Marks: <span id="avgMarks">--</span></h3>
+    <h3>🏆 Top Performer(s):</h3>
+    <ul id="topPerformers"></ul>
+  </div>
+
+  <h2>All Students</h2>
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Subject</th>
+        <th>Marks</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <button onclick="window.location.href='/export'">⬇️ Export to CSV</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
